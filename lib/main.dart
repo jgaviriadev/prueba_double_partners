@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
+import 'package:prueba_double_partners/screens/login_screen.dart';
 
 import 'screens/splash_screen.dart';
 
@@ -14,10 +15,10 @@ final GoRouter _route = GoRouter(
       path: '/',
       builder: (context, state) => const SplashScreen(),
     ),
-    // GoRoute(
-    //   path: '/home',
-    //   builder: (context, state) => const HomeScreen()
-    // ),s
+    GoRoute(
+      path: '/login',
+      builder: (context, state) => const LoginScreen()
+    )
   ]
 );
 class MyApp extends StatelessWidget {
