@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:prueba_double_partners/providers/d_p_provider.dart';
 import 'package:prueba_double_partners/screens/screens.dart';
 
 void main() {
@@ -28,7 +29,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => DPProvider(),)
+      ],
+      child: MaterialApp.router(
         debugShowCheckedModeBanner: false,
         routerConfig: _route,
         theme: ThemeData(
@@ -37,7 +42,7 @@ class MyApp extends StatelessWidget {
             Theme.of(context).textTheme
           )
         ),
-      );
-
+      ),
+    );
   }
 }
