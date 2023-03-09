@@ -36,7 +36,7 @@ class LoginScreen extends StatelessWidget {
                   children: [
                     const SizedBox(height: 20,),
                     const Text(
-                      'Welcome',
+                      'Bienvenido',
                       style: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.bold
@@ -44,11 +44,8 @@ class LoginScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 20,),
                     const Text(
-                      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+                      "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500.",
                       textAlign: TextAlign.justify,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold
-                      ),
                     ),
                     const SizedBox(height: 40,),
                     Row(

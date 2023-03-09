@@ -2,10 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'package:prueba_double_partners/screens/login_screen.dart';
-
-import 'screens/splash_screen.dart';
-
+import 'package:prueba_double_partners/screens/screens.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,6 +16,10 @@ final GoRouter _route = GoRouter(
     GoRoute(
       path: '/login',
       builder: (context, state) => const LoginScreen()
+    ),
+    GoRoute(
+      path: '/register',
+      builder: (context, state) => const RegisterScreen()
     )
   ]
 );
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         routerConfig: _route,
         theme: ThemeData(
+          primaryColor: const Color(0xFFD0EDF2),
           textTheme: GoogleFonts.poppinsTextTheme(
             Theme.of(context).textTheme
           )
