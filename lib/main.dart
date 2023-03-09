@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:prueba_double_partners/screens/login_screen.dart';
 
@@ -29,6 +30,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
         debugShowCheckedModeBanner: false,
         routerConfig: _route,
+        theme: ThemeData(
+          textTheme: GoogleFonts.poppinsTextTheme(
+            Theme.of(context).textTheme
+          )
+        ),
       );
 
   }
