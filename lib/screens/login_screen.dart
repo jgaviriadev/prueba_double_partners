@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -65,7 +66,7 @@ class LoginScreen extends StatelessWidget {
                         const SizedBox(width: 20,),
                         Expanded(
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () => context.push('/register'),
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.white,
                               shape: RoundedRectangleBorder(
