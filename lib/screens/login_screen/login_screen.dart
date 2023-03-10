@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+
+import '../../utils/utils.dart';
+import '../../widgets/widgets.dart';
+
+
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
@@ -15,17 +20,14 @@ class LoginScreen extends StatelessWidget {
             Expanded(
               child: SizedBox(
                 width: MediaQuery.of(context).size.width*0.5,
-                child: Image.asset(
-                  'assets/logo.png',
-                  fit: BoxFit.contain,
-                ),
+                child: const LogoWidget()
               )
             ),
             Container(
               width: double.infinity,
-              decoration: const BoxDecoration(
-                color: Color(0xFF00C0E4),
-                borderRadius: BorderRadius.only(
+              decoration: BoxDecoration(
+                color: Theme.of(context).primaryColor,
+                borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(40.0),
                   topRight: Radius.circular(40.0)
                 )
@@ -45,7 +47,7 @@ class LoginScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 20,),
                     const Text(
-                      "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500.",
+                      Utils.textRandomLong,
                       textAlign: TextAlign.justify,
                     ),
                     const SizedBox(height: 40,),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:prueba_double_partners/models/user.dart';
-
 import '../models/validation_item.dart';
 
 class DVPProvider extends ChangeNotifier{
@@ -17,15 +16,8 @@ class DVPProvider extends ChangeNotifier{
   ValidationItem<DateTime> get dob => _dob;
   List<ValidationItem<String>> get listAddress => _listAddress;
   User? get user => _user;
+  int a =0;
 
-  bool get buttonRegister {
-    if (_name.value != null && _lastName.value != null && _dob.error == null && _dob.value !=null && validateAdress()) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-  
   void changeName(String value) {
     if (value.isNotEmpty) {
       _name = ValidationItem(value, null);
@@ -73,6 +65,7 @@ class DVPProvider extends ChangeNotifier{
   }
 
   bool validateAdress() {
+    _addresses = [];
     bool test = true;
     for(ValidationItem<String> item in _listAddress){
       if(item.value==null){
@@ -84,21 +77,20 @@ class DVPProvider extends ChangeNotifier{
     return test;
   }
 
+  bool  validateForm() {
+    if (_name.value != null && _lastName.value != null && _dob.error == null && _dob.value !=null && validateAdress()) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   void onRegister() {
     _user = User(
       name: 'Jhonatan', 
       lastname: 'Gaviria', 
       birthday: DateTime.now(), 
       addresses: _addresses
-    );
-  }
-
-  void showToast (context, String txt, Color color) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        backgroundColor: color,
-        content: Text(txt)
-      )
     );
   }
 }

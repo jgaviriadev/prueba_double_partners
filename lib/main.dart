@@ -1,29 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:prueba_double_partners/providers/dvp_provider.dart';
-import 'package:prueba_double_partners/screens/screens.dart';
+
+import 'routes/routes.dart';
+
 
 void main() {
   runApp(const MyApp());
 }
-final GoRouter _route = GoRouter(
-  routes: [
-    GoRoute(
-      path: '/',
-      builder: (context, state) => const SplashScreen(),
-    ),
-    GoRoute(
-      path: '/login',
-      builder: (context, state) => const LoginScreen()
-    ),
-    GoRoute(
-      path: '/register',
-      builder: (context, state) => const RegisterScreen()
-    )
-  ]
-);
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -35,9 +21,9 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp.router(
         debugShowCheckedModeBanner: false,
-        routerConfig: _route,
+        routerConfig: customRoutes,
         theme: ThemeData(
-          primaryColor: const Color(0xFFD0EDF2),
+          primaryColor: const Color(0xFF00C0E4),
           textTheme: GoogleFonts.poppinsTextTheme(
             Theme.of(context).textTheme
           )

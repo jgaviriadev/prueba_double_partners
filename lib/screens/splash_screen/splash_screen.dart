@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:prueba_double_partners/widgets/circle.dart';
+
+import '../../widgets/widgets.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -40,11 +41,8 @@ class _SplashScreenState extends State<SplashScreen> {
                 ],
               )
             ),
-            Expanded(
-              child: Image.asset(
-                'assets/logo.png',
-                fit: BoxFit.contain,
-              ),
+            const Expanded(
+              child: LogoWidget(),
             ),
             Expanded(
               child:  Stack(
