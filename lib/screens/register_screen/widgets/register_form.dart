@@ -157,7 +157,7 @@ class RegisterForm extends StatelessWidget {
             onPressed: () {
               if(context.read<DVPProvider>().validateForm()){
                 context.read<DVPProvider>().onRegister();
-                Utils.showToast(context, Colors.redAccent, 'Registro exitoso!');
+                Utils.showToast(context, Colors.greenAccent, 'Registro exitoso!');
                 context.go('/home');
               } else {
                 Utils.showToast(context, Colors.redAccent, 'Hay campos vacios');
