@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'package:prueba_double_partners/providers/d_p_provider.dart';
+import 'package:prueba_double_partners/providers/dvp_provider.dart';
 import 'package:prueba_double_partners/screens/screens.dart';
 
 void main() {
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => DPProvider(),)
+        ChangeNotifierProvider(create: (_) => DVPProvider(),)
       ],
       child: MaterialApp.router(
         debugShowCheckedModeBanner: false,

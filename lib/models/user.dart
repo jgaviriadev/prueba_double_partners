@@ -9,7 +9,7 @@ class User {
 
   String name;
   String lastname;
-  String birthday;
+  DateTime birthday;
   List<Address> addresses;
 }
 
