@@ -64,6 +64,13 @@ class DVPProvider extends ChangeNotifier{
     notifyListeners();
   }
 
+  void removeAddress() {
+    if(_listAddress.length>1){
+      _listAddress.removeLast();
+    }
+    notifyListeners();
+  }
+
   bool validateAdress() {
     _addresses = [];
     bool test = true;

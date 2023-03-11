@@ -141,15 +141,32 @@ class RegisterForm extends StatelessWidget {
           }
         ),
         const SizedBox(height: 10,),
-        GestureDetector(
-          onTap: () => context.read<DVPProvider>().chnageNumberAddress(),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: const [
-              Icon(Icons.add),
-              Text('Agregar otra dirección')
-            ],
-          ),
+        Row(
+          children: [
+            Expanded(
+              child: GestureDetector(
+                onTap: () => context.read<DVPProvider>().removeAddress(),
+                child: Row(
+                  children: const [
+                    Icon(Icons.remove),
+                    Text('Eliminar')
+                  ],
+                ),
+              ),
+            ),
+            Expanded(
+              child: GestureDetector(
+                onTap: () => context.read<DVPProvider>().chnageNumberAddress(),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: const [
+                    Icon(Icons.add),
+                    Text('Agregar')
+                  ],
+                ),
+              ),
+            ),
+          ],
         ),
         const SizedBox(height: 10,),
         SizedBox(
