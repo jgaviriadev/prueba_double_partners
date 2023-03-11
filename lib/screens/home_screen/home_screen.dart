@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:prueba_double_partners/providers/dvp_provider.dart';
+import 'package:prueba_double_partners/screens/home_screen/widgets/widgets.dart';
 
 import '../../models/user.dart';
+import '../../widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -10,28 +12,29 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Selector<DVPProvider, User?>(
-        selector: (_, v) => v.user,
-        builder: (context, User? user, _) {
-          if(user!=null){
-            return Container(
-              color: Colors.amber,
-              width: double.infinity,
-              height: double.infinity,
-              child: ListView.builder(
-                itemCount: user.addresses.length,
-                itemBuilder: (context, index) {
-                  Address add = user.addresses[index];
-                  return Text(add.address);
-                },
-              )
-            );
-          } else {
-            return Container();
-          }
-          
-        }
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).primaryColor,
+        elevation: 0,
+        actions: const[
+          TextAppBar(text: 'Inicio')
+        ],
       ),
+      body: Center(
+        child: SizedBox(
+          width: MediaQuery.of(context).size.width*0.85,
+          //height: 200,
+          child: Selector<DVPProvider, User?>(
+            selector: (_, v) => v.user,
+            builder: (context, User? user, _) {
+              if(user!=null){
+                return InfoCard(user: user,);
+              } else {
+                return Container();
+              }
+            }
+          ),
+        ),
+      )
     );
   }
 }

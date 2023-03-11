@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:prueba_double_partners/utils/utils.dart';
 
+import '../../widgets/widgets.dart';
 import 'widgets/widgets.dart';
 
 
@@ -20,17 +21,7 @@ class RegisterScreen extends StatelessWidget {
           ),
         ),
         actions: const[
-          Center(
-            child: Padding(
-              padding: EdgeInsets.only(right: 20),
-              child: Text(
-                'Registro',
-                style: TextStyle(
-                  color: Colors.black
-                ),
-              ),
-            ),
-          )
+          TextAppBar(text: 'Registro')
         ],
         backgroundColor: Theme.of(context).primaryColor,
         elevation: 0,
