@@ -1,16 +1,36 @@
-# prueba_double_partners
+# Prueba Double V Partners
 
-A new Flutter project.
+<p align="center">
+<img src="https://user-images.githubusercontent.com/112532720/224456959-0747f646-070d-4ac6-b0da-d2cfccfc8efd.png" width="100%"></img> 
+</p>
 
-## Getting Started
+# Prueba Double V Partners
 
-This project is a starting point for a Flutter application.
+Developer with flutter and dart, using provider as state manager.
 
-A few resources to get you started if this is your first Flutter project:
+UI Design inspired by :
+- [Splash Screen](https://www.behance.net/gallery/154738003/Splash-Screen?tracking_source=search_projects%7Clogin+screen) - by Kishore Venugopal
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Features
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Splash Screen
+- User Login
+- User Register
+- Home UI basic
+
+
+## How to Run
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/jgaviriadev/prueba_double_partners.git
+   ```
+2. Install all the packages by typing the following command
+   ```sh
+   flutter pub get
+   ```
+3. Run the App
+
+## Contact
+
+- [Jhonatan Gaviria](https://github.com/jgaviriadev/) | [Twitter](https://twitter.com/jgaviria97) | [Instagram](https://www.instagram.com/jgaviria97/)
