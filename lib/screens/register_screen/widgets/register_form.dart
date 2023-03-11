@@ -114,6 +114,7 @@ class RegisterForm extends StatelessWidget {
           shouldRebuild: (a, b) => true,
           builder: (BuildContext context, List<ValidationItem<String>> listAddress, _) {
             return ListView.builder(
+              physics: const NeverScrollableScrollPhysics(),
               shrinkWrap: true,
               itemCount: listAddress.length,
               itemBuilder: (context, index) {
